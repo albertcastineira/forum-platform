@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+<% @posts.each do |post| %>
+    <p><strong><%= post.title %></strong></p>
+    <p><%= post.body %></p>
+    <%= link_to  "View more", post_path(:id => post.id) %>
+<% end %>
+
+<hr>
+<%= link_to  "Create post", new_post_path %>
